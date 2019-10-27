@@ -1,0 +1,129 @@
+<html>
+<body>
+<h1 style="color: orange"><center>Hola a todos los que esten viendo esta plantilla</center></style></h1>
+
+
+{% if Nombreclas == ' Profesor Arnoldo'%}<!--condicional con la informacion que llega a la pagina-->
+<p><h2>El curso lo imparte el profesor titular:</h2></p>
+{% else %}
+<p><h2>El curso lo imparte el profesor suplente: </h2></p>
+{% endif %}
+<!--
+    Se pueden utilizar otros operadores como mayor o menor (ke) 
+
+en la filosofia django se trabaja separando la parte de logica del diseño
+
+la logica se maneja en el archivo views.py
+y el codigo html en la plantilla 
+-->
+{# comentarios que se pueden hacer en html (solo funciona en una linea )#}
+
+{% comment %}              ESTE TIPO DE COMENTARIO FUNCIONA PARA VARIAS LINEAS
+                             ESTA ES OTRA FORMA DE COMENTAR SIN PROBLEMAS         "9:35"
+{% endcomment %}
+
+
+<br>
+
+    <!--para rescatar valor de contexto en un parrafo-->
+    <p><h3>El nombre del estudiante es:{{nombre_persona}}</h3> </p><!--se lama en doble llave el nombre de clave dentro del diccionario-->
+
+    <p><h3>El apellido del estudiante es: {{apellido_persona.upper}}</h3></p>
+     <!--aca vamos a utilizar el metodo upper para utilizar las mayusculas-->
+
+
+     <p><h3>El apellido del estudiante es: {{apellido_persona|lower}}</h3></p>
+     <!--agregar filtros con simbolo paiper que significa tuberia que hace lo mismo que el punto en cuanto deja las mayusculas -->
+
+     <p><h3>El nombre del estudiante es:{{nombre_persona|upper}}</h3> </p>
+     <!--con lower solamete coje la primera linea de string para mostrar la primera lera -->
+
+
+    <p><h3>La hora y la fecha actual es: {{hora_actual}}</h3></p>
+    <!--para colocar tildes o acentos--><p><h3>día o d&iacute;a</h3></p>
+    <p><h3>El dia es: {{hora_actual.day}}</h3></p><!--para acceder a las propiedades del objeto-->
+    <!--aca se accede solo al dia  que es una (propiedad) -->
+    <p><h3>El dia es: {{hora_actual.day}}/{{hora_actual.month}}/{{hora_actual.year}} </h3></p>
+    <!--acceder a dia mes y año  separado cada uno por la barra inclinada--> 
+    <br><br>
+    <p><h3>El nombre del profesor es:{{Nombreclas}} {{Apellidoclas}}</h3> </p>
+    <p><h3>Temas a tratar:{{temas.0}}, {{temas.1}}{{tema.2}}.</h3> </p><!--despues del punto se puede llamar con la posicion del elemento-->
+    <!--ejemplo-->
+    <p><h3>Temas a tratar:{{temas.2}}, {{temas.3}}, {{temas.4}}.</h3> </p>
+    <p><strong>Temas del curso: </strong></p>
+    <!--si se copean en orden de lista es una forma poco convencional y no recomendada-->
+    <!--ya que genera mucho codigo html-->
+    <!--la mejor opcion es recorrer todos los elementos de la lista con un bucle for-->
+    <p>
+        <ul><!--lista no ordenada de li-->
+        {% for elTema in temas%}<!--la sintaxis del del bucle con apertura y cierre-->
+
+            <!--{{elTema}}--><!--al recorrer el bucle cada vielta imprime la lista  -->
+            <!--para que los imprima de manera ordenada-->
+            <li>{{elTema}}</li> <!--li elementos de lista-->
+
+        {% endfor %}
+        </ul>
+<!---para encadenar filtros  -->
+<p>
+    <ul>
+    {% for elTema in temas%}
+
+        <li>{{elTema|first}}</li><!--muestra solamente la primera letra de los datos que trae el la tupla-->
+
+        <!--realizacion de filtros encadenados -->
+        <!--adicionarle despues del first |lower-->
+        
+        <!--descargar filtros desde la documentacion de django -->
+        
+
+    {% endfor %}
+    </ul>
+
+    <ul>
+</p>
+
+
+
+
+
+
+
+        <!--constuir estructura condicional para que en caso de que la lista
+        este vacia mustre un mensaje-->
+
+        <ul>
+    </p>
+    <p><strong>Temas del curso: </strong>con lista vacia y condicional </p>
+    <p>     
+        <ul>   
+
+        {% if temas2 %}<!--si la lista contiene informacion-->
+            {% for elTema in temas%}
+    
+               
+                <li>{{elTema}}</li> 
+    
+            {% endfor %}
+         {% else %}<!--en caso de que no muestra el mensaje-->
+            <P>no hay elementos en la lista o la lista esta vacia</P>
+        
+        {% endif %}
+
+        </ul>
+        <!--se pueden agregar for anidados e if anidados en ciclos y condicionales -->
+
+    </p>
+<!--https://docs.djangoproject.com/en/2.2/ref/templates/builtins/      se explican las estructuras de control de flujo dentro de las plantillas 
+
+templatetags
+tambien se explican los filtros
+herencia de plantillas 
+operadores booleanos 
+
+-->    
+
+
+
+</body>
+</html>

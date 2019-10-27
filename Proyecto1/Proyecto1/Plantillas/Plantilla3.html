@@ -1,0 +1,358 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <font face="Verdana">
+      
+        <title>formulario_intereses</title>
+      
+      
+      <!--diseño en bootstrab-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+       
+        <!--jquery-->
+      </head>
+    <body>
+        <div id="header">
+   <form method="post" action="guardar.php">
+   <form method="post" action="consultar.php">
+   
+          <div id="cuerpo">
+   
+            <
+              
+              
+            
+            div id="formulario">
+   <form name="formRegistro" action ="procesar.php" method="post">
+     <table border="0">
+   
+     <tr>
+       <td class="centradoverde" colspan="2">Registro Trabajadores</td>
+     </tr>
+   
+   
+   <tr>
+   <td>Rut:</td>
+   <td>
+     <input type="text" name="txtRut" maxlength="10" size="20" placeholder="sin puntos ni guion"/>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Nombre:</td>
+   <td>
+       <input type="text" name="txtNombre"/>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>ApellidoPaterno:</td>
+   <td>
+     <input type="text" name="txtApellidoPaterno"/>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Apellido Materno:</td>
+   <td>
+     <input type="text" name="txtApellidoMaterno"/>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Sexo:</td>
+   <td>
+     <input type="radio" name="opSexo1" value="masculino"/>Masculino
+     <input type="radio" name="opSexo2" value="femenino"/>Femenino
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Nivel De Estudio:</td>
+   <td>
+     <input type="checkbox" name="opEstudio1" value="no tiene"/>No Tiene<br/>
+     <input type="checkbox" name="opEstudio4" value="soytecnico"/>Tecnico<br/>
+     <input type="checkbox" name="opEstudio2" value="soy tecnologo"/>Tecnologo<br/>
+     <input type="checkbox" name="opEstudio3" value="soy universitario"/>Universitario<br/>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Ciudad De Nacimiento</td>
+   <td>
+     <select name="cboCiudad">
+       <option value="bucaramanga">Bucaramanga</option>
+           <option value="bogota">Bogota</option>
+           <option value="medellin">Medellin</option>
+           <option value="meta">Meta</option>
+     </select>
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Curriculum</td>
+   <td>
+     <input type="file" name="curriculum" />
+   </td>
+   </tr>
+   
+   <tr>
+   <td>Foto</td>
+   <td>
+     <input type="file" name="foto" />
+   </td>
+   </tr>
+   
+     <tr>
+       <td class="centradoverde" colspan="2">
+       <input type="submit"  value="guardar"
+       
+       </td>
+     </tr>
+   
+     <tr>
+       <td class="centradoverde" colspan="2">
+       <input type="submit"  value="consultar"
+       
+       </td>
+     </tr>
+   
+     <table border="1">
+   
+            </div>
+   
+            <table id="tablaDatos" border="0" align="center">
+              <caption class="titulo">Alumnos</caption>
+              <tr>
+   
+   
+   
+    
+
+<body>
+<h1 style="color: red"><center>Grupo de investigacion vanguard</center></style></h1>
+    <!--agregar datos basicos de la informacion del huesped-->
+
+
+
+<h3></h3>Reguistro de usuarios y funcionales </h4>
+<br>
+<h3>seleccione servicios</h3>
+<select name="Roll" class="custom-select mb-3">
+    <option selected>Guia turistico </option>
+    <option selected>Hotel o posada </option><!---->
+    <option selected>Rutas de Transporte</option>
+    <option selected>Parqueadero</option>
+    <option selected>Restaurante</option>
+    <option selected>Destinos turisticos</option>
+    
+</select>
+<br>
+
+<h3>seleccione el roll usuario con el que desea continuar</h3>
+<select name="Roll" class="custom-select mb-3">
+    <option selected>Roll de Aprendiz </option>
+    <option selected>Roll de Intructor</option>
+    <option selected>Roll de Administrador</option>
+    <option selected>Operasdor logistico </option> 
+    <option selected>Recepcionista</option> 
+
+</select>
+
+<h3>seleccione rango de edad </h3>
+  <select class="btn btn-outline-secondary dropdown-toggle" name="rol" id="rol" >
+        <option value="1">Edad</option>
+        <option value="2">18-25</option>
+        <option value="3">26-35</option>
+        <option value="4">36-60</option>
+  </select>
+
+  <h3>seleccione su numero de documento</h3>
+  <select name="ID" class="custom-select mb-3">
+        <option selected>Cedula de ciudadania</option>
+        <option selected>Cedula de extrangeria</option>
+        <option selected>Tarjeta de identidad</option>
+        <option selected>Rejistro civil</option>
+        <option selected>NIt</option>
+        <option selected>Persona Natural</option>
+        <option selected>Persona juridica</option>
+  </select>
+  <br><br><br><br>
+  
+  
+  
+  <!--para rescatar valor de contexto en un parrafo-->
+<p><h3>El numero de la matricula del usuario :{{matricula_usuario}}</h3> </p><!--se lama en doble llave el nombre de clave dentro del diccionario-->
+<p><h3>El nombre de del usuario :{{nombre_usuario}}</h3> </p>
+<p><h3>Edad del usuario:{{edad_usuario}}</h3> </p>
+<p><h3>Timestre actual:{{trimestre_usuario}}</h3> </p>
+<p><h3>Genero de el Alumno:{{genero_usuario}}</h3> </p>
+<p><h3>numero de Id:{{numero_usuario}}</h3></p>
+<p><h3>Clave de la carrera:{{carrera_usuario}}</h3> </p>
+<p><h3>ra:{{nombrera}}</h3> </p>
+  
+  
+  <br><br><br><br>
+  <br>
+
+<!--parametros de datos  agregar array-->
+
+age =input("inserta tu edad: ")
+print(type(int(age)))#me imprime el la variable string que es convertida a entero
+
+age_2 = int(age) + 5
+print(age_2)
+
+
+
+{% if Nombreclas == ' Profesor Juan' %}
+
+<p> El curso lo imparte el profesor titular</p>
+
+{% else %}
+<p>los datos no coinciden</p>
+
+{% endif %}
+
+
+</body>
+</html>
+
+
+
+  
+
+
+<!--fondo de pantalla-->
+<body background="../assets/img/7.png" bgcolor="blue" class="text-center" data-gr-c-s-loaded="true" onload="init();">
+  <!--responsive de pantalla-->
+ <!--<link rel="stylesheet" href="../assets/css/fondo.css">-->
+ 
+  <link rel="stylesheet" href="../assets/css/fondo.css">
+
+  <?php require '../partials/header.php' ?>
+
+  <h2 ><b><font color="orange">Ingreso de Usuarios </h2></b></font>
+
+  <!-- <form method="POST" action="../controller/userManagment.php">  
+    <input name="documento" type="number" placeholder="Ingrese numero de Cedula" Required="required">
+    <input name="password" type="password" placeholder="constraseña" Required="required">
+    <input name="confirm_password" type="password" placeholder="Confirmar Contraseña" Required="required">
+    <input type="submit" value="Guardar">
+  </form> -->
+
+  
+<br>
+<br>
+<div class="container">
+
+<div class="row featurette">
+
+    
+
+    </div>
+<div class="row" >
+<div class="col-md-6">
+
+
+                        <form class="form-signin" method="post" action="../controller/userManagment.php">
+
+                       <img class="mb-4" src="../assets/img/icono.png" alt="" width="72" height="72">
+                        <h1 class="h3 mb-3 font-weight-normal">Seleccione su rol de ingreso</h1>
+
+
+      <div class="row">
+      <!--contenedor de seleccion con las opciones de los roles -->
+      <div class="col-6">
+                       <center>
+  <select class="btn btn-outline-secondary dropdown-toggle" name="rol" id="rol" >
+  <option value="1">Administrador</option>
+  <option value="2">Coordinador</option>
+  <option value="3">Instructor</option>
+  <option value="4">Aprendiz</option>
+</select>
+
+
+                    </center>
+    </div>
+    </div>
+    
+     <div class="row">
+
+      <div class="col-10">
+    <label for="inputEmail" style="display:none" class="sr-only">Docoumento</label>
+           <input type="number" id="inputDocumento" name="documento" style="display:none"
+            class="form-control" placeholder="Documento"  autofocus="">
+
+    <label for="inputPassword" class="sr-only" >Password</label>
+           <input type="password" id="inputPassword" name="passw"
+            style="display:none" class="form-control" placeholder="Password">
+
+    <label for="inputFicha" style="display:none" class="sr-only" >Ficha</label> 
+           <input type="number" id="inputFicha" name="ficha" style="display:none" 
+            class="form-control" placeholder="Ficha" >
+
+      </div>
+     </div>
+    <div class="input-group mb-3">
+
+     </div>
+
+    <div style="display:none" class="checkbox mb-1">
+      <label>
+        <input type="checkbox" value="remember-me"> Recordar
+      </label>
+    </div>
+
+    <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>-->
+    <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>-->
+    
+
+    
+
+<button  class="boton" type="submit">Ingresar </button>
+<br>
+    <span ></span>
+    
+ 
+<br>
+   <?php if($message!=''){ ?>
+       <div class="alert alert-danger" role="alert">
+       <?php echo $message; ?>
+        </div>
+    <?php } ?>
+    <h3>
+    <p class="mt-5 mb-3 text-muted">© 2019-2022</p>
+     </h3>   
+  </form>
+</div>
+</div>
+
+<div class="col-3">
+</div>
+
+<p>
+Regional Cundimarca
+</p>
+
+<div class="row">
+<div class="col-md-12">
+otro tipo de informacion centrada como agradecimientos 
+</div>
+<div class="col-md-6">
+redes sociales 
+</div>
+<div class="col-md-6">
+contactos correos y direccion
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="../assets/js/seleccionlogin.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965Dz   O0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<!--CIERRO EL TIPO DE LETRA-->
+</font>
